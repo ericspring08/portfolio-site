@@ -114,6 +114,10 @@ svg {
   transform: translate(-50%, -50%);
 }
 
+*.fadeIn {
+  animation: fadeIn 4s;
+}
+
 @keyframes stroke-offset{
 	100% {stroke-dashoffset: -35%;}
 }

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="./titleanimation.css"/>
-        <link rel="stylesheet" href="./highlight.css"/>
+        <link rel="stylesheet" href="./css/titleanimation.css"/>
+        <link rel="stylesheet" href="./css/highlight.css"/>
     </head>
     <body>     
         <ul class="menu">
@@ -14,8 +14,8 @@
             </div>
         </ul>
         <button class="hamburger">
-            <img class = "menu_button menuIcon" src="./menu.png" width="35" height="35" style="margin: 20px;"></img>
-            <img class = "menu_button closeIcon" src="./close.png" width="30" height="30" style="margin: 20px;"></img>
+            <img class = "menu_button menuIcon" src="./images/menu.png" width="35" height="35" style="margin: 20px;"></img>
+            <img class = "menu_button closeIcon" src="./images/close.png" width="30" height="30" style="margin: 20px;"></img>
         </button>       
         <div class="container">
             <svg viewBox="0 0 960 300">
@@ -35,36 +35,10 @@
         </div>
         <div class="arrowcontainer">
             <center>
-                <img src="./downarrow.png" width="50" height="50"></img>
+                <img src="./images/downarrow.png" width="50" height="50"></img>
             </center>
         </div>
     </body>
 </html>
 
-<script>
-    const menu = document.querySelector(".menu");
-    const menuItems = document.querySelectorAll(".menuItem");
-    const hamburger= document.querySelector(".hamburger");
-    const closeIcon= document.querySelector(".closeIcon");
-    const menuIcon = document.querySelector(".menuIcon");
-
-    function toggleMenu() {
-    if (menu.classList.contains("showMenu")) {
-        menu.classList.remove("showMenu");
-        closeIcon.style.display = "none";
-        menuIcon.style.display = "block";
-    } else {
-        menu.classList.add("showMenu");
-        closeIcon.style.display = "block";
-        menuIcon.style.display = "none";
-    }
-    }
-
-    hamburger.addEventListener("click", toggleMenu);
-
-    menuItems.forEach( 
-        function(menuItem) { 
-            menuItem.addEventListener("click", toggleMenu);
-        }
-    )
-</script>
+<script src="./js/menu.js"></script>

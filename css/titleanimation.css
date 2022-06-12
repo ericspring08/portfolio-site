@@ -2,7 +2,6 @@
 
 html, body{
     background-color: black;
-  height: 90%;
   font-weight: 800;
   margin: 0;
   padding: 0;
@@ -13,16 +12,17 @@ body{
 }
 
 .container {
-  display: flex;
+  display:block;
+  margin-top: 30vh;
 /*   border:1px solid red; */
-  height: 100%;
+  height: auto;
   align-items: center;
 }
 
 svg {
     display: block;
-    font: 10.5em 'Montserrat';
-    width: 960px;
+    font: 10em 'Montserrat';
+    width: 2000px;
     height: 300px;
     margin: 0 auto;
     animation: fadeIn 4s;
@@ -38,32 +38,33 @@ svg {
 }
 
 .text-copy:nth-child(1){
-	stroke: #4D163D;
+	stroke: #AF40FF;
 	animation-delay: -1;
 }
 
 .text-copy:nth-child(2){
-	stroke: #840037;
+	stroke: #5B42F3;
 	animation-delay: -2s;
 }
 
 .text-copy:nth-child(3){
-	stroke: #BD0034;
+	stroke: #00DDEB;
 	animation-delay: -3s;
 }
 
 .text-copy:nth-child(4){
-	stroke: #BD0034;
+	stroke: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
 	animation-delay: -4s;
 }
 
 .text-copy:nth-child(5){
-	stroke: #FDB731;
+	stroke: white;
 	animation-delay: -5s;
 }
 
 .arrowcontainer {
     height: 10%;
+    padding-bottom: 0rem;
     animation: fadeIn 4s;
 }
 

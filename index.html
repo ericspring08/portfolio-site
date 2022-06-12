@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./titleanimation.css"/>
+        <link rel="stylesheet" href="./highlight.css"/>
+    </head>
+    <body>     
+        <ul class="menu">
+            <div class="menuItems">
+                <li><a class="menuItem" href="#"><span>Home</span></a></li>
+                <li><a class="menuItem" href="#"><span>My Works</span></a></li>
+                <li><a class="menuItem" href="#"><span>About Me</span></a></li>
+                <li><a class="menuItem" href="#"><span>Contact Me</span></a></li>
+            </div>
+        </ul>
+        <button class="hamburger">
+            <img class = "menu_button menuIcon" src="./menu.png" width="35" height="35" style="margin: 20px;"></img>
+            <img class = "menu_button closeIcon" src="./close.png" width="30" height="30" style="margin: 20px;"></img>
+        </button>       
+        <div class="container">
+            <svg viewBox="0 0 960 300">
+            <symbol id="s-text">
+                <text text-anchor="middle" x="50%" y="80%">Hello</text>
+            </symbol>
+        
+            <g class = "g-ants">
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+            </g>
+            </svg>
+            <br/>
+        </div>
+        <div class="arrowcontainer">
+            <center>
+                <img src="./downarrow.png" width="50" height="50"></img>
+            </center>
+        </div>
+    </body>
+</html>
+
+<script>
+    const menu = document.querySelector(".menu");
+    const menuItems = document.querySelectorAll(".menuItem");
+    const hamburger= document.querySelector(".hamburger");
+    const closeIcon= document.querySelector(".closeIcon");
+    const menuIcon = document.querySelector(".menuIcon");
+
+    function toggleMenu() {
+    if (menu.classList.contains("showMenu")) {
+        menu.classList.remove("showMenu");
+        closeIcon.style.display = "none";
+        menuIcon.style.display = "block";
+    } else {
+        menu.classList.add("showMenu");
+        closeIcon.style.display = "block";
+        menuIcon.style.display = "none";
+    }
+    }
+
+    hamburger.addEventListener("click", toggleMenu);
+
+    menuItems.forEach( 
+        function(menuItem) { 
+            menuItem.addEventListener("click", toggleMenu);
+        }
+    )
+</script>

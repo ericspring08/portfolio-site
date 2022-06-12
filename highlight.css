@@ -1,0 +1,19 @@
+
+.menuItem{
+    color: #484848;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: monospace;
+    letter-spacing: 7px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.menuItem span{
+    transition: .5s linear
+}
+.menuItem:hover span{
+    color: #fff;
+    text-shadow: 0 0 10px #fff,
+                    0 0 20px #fff, 
+                    0 0 40px #fff;
+}

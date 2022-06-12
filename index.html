@@ -7,10 +7,10 @@
     <body>     
         <ul class="menu">
             <div class="menuItems">
-                <li><a class="menuItem" href="#"><span>Home</span></a></li>
-                <li><a class="menuItem" href="#"><span>My Works</span></a></li>
-                <li><a class="menuItem" href="#"><span>About Me</span></a></li>
-                <li><a class="menuItem" href="#"><span>Contact Me</span></a></li>
+                <li class="unselectable"><a class="menuItem" href="#"><span>Home</span></a></li>
+                <li class="unselectable"><a class="menuItem" href="#"><span>My Works</span></a></li>
+                <li class="unselectable"><a class="menuItem" href="#"><span>About Me</span></a></li>
+                <li class="unselectable"><a class="menuItem" href="#"><span>Contact Me</span></a></li>
             </div>
         </ul>
         <button class="hamburger">
@@ -19,7 +19,7 @@
         </button>       
         <div class="container">
             <svg viewBox="0 0 960 300">
-            <symbol id="s-text">
+            <symbol id="s-text" class="unselectable">
                 <text text-anchor="middle" x="50%" y="80%">Hello</text>
             </symbol>
         
@@ -35,7 +35,7 @@
         </div>
         <div class="arrowcontainer">
             <center>
-                <img src="./images/downarrow.png" width="50" height="50"></img>
+                <img class="unselectable" src="./images/downarrow.png" width="50" height="50"></img>
             </center>
         </div>
     </body>

@@ -74,6 +74,4 @@ scene.set({
 scene.setPlaySpeed(1);
 scene.setEasing("ease-in-out");
 scene.setIterationCount("infinite");
-document.getElementsByClassName(".wrapper_a").addEventListener('focus', () => {
-  scene.play()
-})
+scene.play()

@@ -1,5 +1,3 @@
-
-
 const scene = new Scene({
     ".container_a": {}
   }, {

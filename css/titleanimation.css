@@ -1,14 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 html, body{
-    background-color: black;
+  scroll-behavior: smooth;
+  background-color: black;
+  height: 0%;
   font-weight: 800;
   margin: 0;
   padding: 0;
-}
-
-body{
-  font-family: Arial;
 }
 
 .container {
@@ -19,13 +17,22 @@ body{
   align-items: center;
 }
 
-svg {
+.title_text {
     display: block;
     font: 10em 'Montserrat';
     width: 1400px;
     height: 160px;
     margin: 0 auto;
     animation: fadeIn 4s;
+}
+
+.works_title {
+  display: block;
+  font: 10em 'Montserrat';
+  width: 1400px;
+  height: 160px;
+  margin: 0 auto;
+  animation: fadeIn 4s;
 }
 
 .text-copy {
@@ -127,10 +134,100 @@ svg {
   animation: fadeIn 4s;
 }
 
+.home {
+  height: 100%;
+}
+
 @keyframes stroke-offset{
 	100% {stroke-dashoffset: -35%;}
 }
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
+}
+
+.sub_title {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 800;
+  font-size: 5em;
+  width: 10em;
+  line-height: 0.9em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 100px;
+  margin-top: calc(50vh - 1em);
+}
+
+
+/* Style the rainbow text element. */
+.rainbow-text {
+  /* Create a conic gradient. */
+  /* Double percentages to avoid blur (#000 10%, #fff 10%, #fff 20%, ...). */
+  background: #CA4246;
+  background-color: #CA4246;
+  background: conic-gradient(
+    #AF40FF 16.666%, 
+    #5B42F3 16.666%, 
+    #00DDEB 33.333%, 
+    blue 33.333%, 
+    white 50%, 
+    violet 50%, 
+    blue 66.666%, 
+    navy 66.666%, 
+    blue 83.333%, 
+    #A7489B 83.333%);
+  
+  /* Set thee background size and repeat properties. */
+  background-size: 57%;
+  background-repeat: repeat;
+  
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  
+  /* Animate the text when loading the element. */
+  /* This animates it on page load and when hovering out. */
+  animation: rainbow-text-animation-rev 0.5s ease forwards;
+
+  cursor: pointer;
+}
+
+/* Add animation on hover. */
+.rainbow-text:hover {
+  animation: rainbow-text-animation 0.5s ease forwards;
+}
+
+/* Move the background and make it larger. */
+/* Animation shown when hovering over the text. */
+@keyframes rainbow-text-animation {
+  0% {
+    background-size: 57%;
+    background-position: 0 0;
+  }
+  20% {
+    background-size: 57%;
+    background-position: 0 1em;
+  }
+  100% {
+    background-size: 300%;
+    background-position: -9em 1em;
+  }
+}
+
+/* Move the background and make it smaller. */
+/* Animation shown when entering the page and after the hover animation. */
+@keyframes rainbow-text-animation-rev {
+  0% {
+    background-size: 300%;
+    background-position: -9em 1em;
+  }
+  20% {
+    background-size: 57%;
+    background-position: 0 1em;
+  }
+  100% {
+    background-size: 57%;
+    background-position: 0 0;
+  }
 }
